@@ -11,11 +11,10 @@ public class Contract {
 
     private List<Installment> installments = new ArrayList<>();
 
-    public Contract(int number, LocalDate date, double totalValue, List<Installment> installments) {
+    public Contract(int number, LocalDate date, double totalValue) {
         this.number = number;
         this.date = date;
         this.totalValue = totalValue;
-        this.installments = installments;
     }
 
     public int getNumber() {
@@ -33,9 +32,4 @@ public class Contract {
     public List<Installment> getInstallments() {
         return installments;
     }
-
-    public void setInstallments(List<Installment> installments) {
-        this.installments = installments;
-    }
-
 }
