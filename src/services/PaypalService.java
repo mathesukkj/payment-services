@@ -2,12 +2,12 @@ package services;
 
 public class PaypalService implements OnlinePaymentService {
 
-    public double paymentFee(double amount) {
-        throw new UnsupportedOperationException("Unimplemented method 'paymentFee'");
+    public double interest(double amount, int months) {
+        return amount * 0.01 * months;
     }
 
-    public double interest(double amount, int months) {
-        throw new UnsupportedOperationException("Unimplemented method 'interest'");
+    public double paymentFee(double amount) {
+        return amount * 0.02;
     }
 
 }
