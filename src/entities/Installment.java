@@ -1,6 +1,7 @@
 package entities;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Installment {
     private LocalDate dueDate;
@@ -25,6 +26,11 @@ public class Installment {
 
     public void setAmount(double amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return dueDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + " - " + amount;
     }
 
 }
