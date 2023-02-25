@@ -3,7 +3,13 @@ package services;
 import entities.Contract;
 
 public class ContractService {
-    public void processContract(Contract contract, int number) {
+    private OnlinePaymentService onlinePaymentService;
+
+    public ContractService(OnlinePaymentService onlinePaymentService) {
+        this.onlinePaymentService = onlinePaymentService;
+    }
+
+    public void processContract(Contract contract, int months) {
 
     }
 }
